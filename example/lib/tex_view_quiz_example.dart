@@ -122,22 +122,19 @@ class _TeXViewQuizExampleState extends State<TeXViewQuizExample> {
             child: TeXViewColumn(children: [
               TeXViewDocument(quizList[currentQuizIndex].statement,
                   style: TeXViewStyle(textAlign: TeXViewTextAlign.Center)),
-              TeXViewGroup(
+              TeXViewGroupRadio(
                   children: quizList[currentQuizIndex]
                       .options
                       .map((QuizOption option) {
-                    return TeXViewGroupItem(
+                    return TeXViewGroupRadioItem(
                         rippleEffect: false,
                         id: option.id,
                         child: TeXViewDocument(option.option,
                             style:
                                 TeXViewStyle(padding: TeXViewPadding.all(10))));
                   }).toList(),
-                  selectedItemStyle: TeXViewStyle(
-                      borderRadius: TeXViewBorderRadius.all(10),
-                      border: TeXViewBorder.all(TeXViewBorderDecoration(
-                          borderWidth: 3, borderColor: Colors.green[900])),
-                      margin: TeXViewMargin.all(10)),
+                  selectedItemStyle:
+                      TeXViewStyle(margin: TeXViewMargin.all(10)),
                   normalItemStyle: TeXViewStyle(margin: TeXViewMargin.all(10)),
                   onTap: (id) {
                     this.selectedOptionId = id;

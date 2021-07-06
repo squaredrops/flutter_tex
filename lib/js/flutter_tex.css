@@ -8,6 +8,24 @@
     position: relative;
 }
 
+.tex-view-group-radio-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tex-view-group-radio-item:hover {
+    cursor: pointer;
+}
+
+.tex-view-group-radio-item::before {
+    content: url("../assets/images/unchecked-radio.svg");
+}
+
+.tex-view-group-radio-item.selected::before {
+    content: url("../assets/images/checked-radio.svg");
+}
+
 .tex-view-ink-well .ripple {
     border-radius: 50%;
     background-color: lightgrey;

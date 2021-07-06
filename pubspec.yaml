@@ -22,6 +22,9 @@ dev_dependencies:
 
 flutter:
   assets:
+    # Images
+    - packages/flutter_tex/assets/images/checked-radio.svg
+    - packages/flutter_tex/assets/images/unchecked-radio.svg
     - packages/flutter_tex/js/flutter_tex.js
     - packages/flutter_tex/js/flutter_tex.css
     #MathJax
