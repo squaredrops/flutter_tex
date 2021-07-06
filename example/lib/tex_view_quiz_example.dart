@@ -128,6 +128,7 @@ class _TeXViewQuizExampleState extends State<TeXViewQuizExample> {
                       .map((QuizOption option) {
                     return TeXViewGroupRadioItem(
                         rippleEffect: false,
+                        initiallySelected: option.id == 'id_1',
                         id: option.id,
                         child: TeXViewDocument(option.option,
                             style:

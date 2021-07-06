@@ -9,15 +9,21 @@ class TeXViewGroupRadioItem extends TeXViewWidget {
 
   final bool? rippleEffect;
 
+  final bool initiallySelected;
+
   const TeXViewGroupRadioItem(
-      {required this.id, required this.child, this.rippleEffect});
+      {required this.id,
+      required this.child,
+      this.rippleEffect,
+      this.initiallySelected = false});
 
   @override
   TeXViewWidgetMeta meta() {
     return TeXViewWidgetMeta(
         id: this.id,
         tag: 'div',
-        classList: 'tex-view-group-radio-item',
+        classList: 'tex-view-group-radio-item' +
+            (initiallySelected ? ' selected' : ''),
         node: Node.InternalChild);
   }
 
