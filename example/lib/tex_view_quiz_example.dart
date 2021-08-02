@@ -157,6 +157,17 @@ class _TeXViewQuizExampleState extends State<TeXViewQuizExample> {
               backgroundColor: Colors.white,
             ),
           ),
+          TextFormField(
+                      keyboardType: TextInputType.multiline,
+                      minLines: 5,
+                      maxLines: null,
+                      decoration: InputDecoration(
+                        hintText: 'Description',
+                        hintStyle: TextStyle(color: Colors.grey),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        ),
+                      )),
           if (isWrong)
             Padding(
               padding: const EdgeInsets.all(20),

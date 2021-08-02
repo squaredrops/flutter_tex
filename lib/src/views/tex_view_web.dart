@@ -39,10 +39,11 @@ class TeXViewState extends State<TeXView> with AutomaticKeepAliveClientMixin {
       double height = double.parse(message.toString());
       // print("new-$height     old-$_height");
       //if (widget.height == null)
-      //setState(() {
-      _height = height;
+      setState(() {
+        this._height = height;
       //heightCompleter.complete(height);
-      //});
+      });
+      widget.onRenderFinished?.call(height);
     };
 
     js.context['OnTapCallback'] = (id) {
